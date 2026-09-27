@@ -1,0 +1,743 @@
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0rem 3rem 3rem;
+
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(75, 100, 141, 0.13) 0%,
+      rgba(75, 100, 141, 0.05) 25%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(89, 135, 168, 0.07),
+      transparent 35%
+    ),
+    #000;
+
+  color: #e7fbf9;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DETALLES DECORATIVOS DEL FONDO
+   ========================================================= */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  top: -250px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(89, 135, 168, 0.06);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+  width: 400px;
+  height: 400px;
+
+  bottom: -250px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(75, 100, 141, 0.06);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(400px, 0.9fr);
+
+  align-items: center;
+
+  gap: 5rem;
+}
+
+
+/* =========================================================
+   CONTENIDO DE TEXTO
+   ========================================================= */
+
+.hero-text-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 650px;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PEQUEÑA ETIQUETA
+   ========================================================= */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.5rem 0.9rem;
+
+  margin-bottom: 1.5rem;
+
+  border: 1px solid rgba(89, 135, 168, 0.35);
+
+  border-radius: 999px;
+
+  background: rgba(89, 135, 168, 0.08);
+
+  color: #b9e4f4;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.hero-badge::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #7cb8d8;
+
+  box-shadow:
+    0 0 8px rgba(124, 184, 216, 0.8);
+}
+
+
+/* =========================================================
+   NOMBRE
+   ========================================================= */
+
+.hero-name {
+  margin: 0 0 0.7rem;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  font-weight: 800;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.hero-title {
+  margin: 0 0 1.5rem;
+
+  color: #b9e4f4;
+
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   LÍNEA DECORATIVA
+   ========================================================= */
+
+.divider-line {
+  width: 70px;
+  height: 4px;
+
+  margin: 0 0 1.7rem;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #4b648d,
+    #7ca8c4
+  );
+
+  box-shadow:
+    0 0 15px rgba(89, 135, 168, 0.35);
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+.hero-description {
+  max-width: 600px;
+
+  margin: 0 0 2.3rem;
+
+  color: rgba(231, 251, 249, 0.72);
+
+  font-size: 1.08rem;
+
+  line-height: 1.85;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================================================
+   GRUPO DE BOTONES
+   ========================================================= */
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BOTÓN BASE
+   ========================================================= */
+
+.cta-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+
+  padding: 0.9rem 1.7rem;
+
+  border: 1px solid transparent;
+
+  border-radius: 10px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.cta-button.primary {
+  background: linear-gradient(
+    135deg,
+    #4b648d,
+    #5987a8
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(75, 100, 141, 0.22);
+}
+
+
+.cta-button.primary:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    135deg,
+    #5987a8,
+    #6e9fbd
+  );
+
+  box-shadow:
+    0 12px 35px rgba(89, 135, 168, 0.35);
+}
+
+
+/* =========================================================
+   BOTÓN SECUNDARIO
+   ========================================================= */
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.02);
+
+  border-color: rgba(185, 228, 244, 0.2);
+
+  color: #d9f5f7;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.cta-button.secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(185, 228, 244, 0.45);
+
+  background: rgba(89, 135, 168, 0.08);
+}
+
+
+/* =========================================================
+   CONTENEDOR DE LA IMAGEN
+   ========================================================= */
+
+.hero-image-container {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   WRAPPER DE LA FOTO
+   ========================================================= */
+
+.photo-wrapper {
+  position: relative;
+
+  width: min(100%, 560px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   HALO PRINCIPAL
+   ========================================================= */
+
+.photo-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  width: 75%;
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(89, 135, 168, 0.25) 0%,
+      rgba(75, 100, 141, 0.13) 35%,
+      rgba(75, 100, 141, 0.05) 55%,
+      transparent 72%
+    );
+
+  filter: blur(35px);
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SEGUNDO HALO
+   ========================================================= */
+
+.photo-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  width: 60%;
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(89, 135, 168, 0.12);
+
+  box-shadow:
+    0 0 70px rgba(89, 135, 168, 0.08);
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FOTO DE PERFIL
+   ========================================================= */
+
+.profile-photo {
+  display: block;
+
+  width: 120%;
+  max-width: none;
+
+  height: auto;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 2;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 65%,
+      rgba(0, 0, 0, 0.95) 73%,
+      rgba(0, 0, 0, 0.75) 82%,
+      rgba(0, 0, 0, 0.40) 90%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 62% 68% at center,
+      #000 48%,
+      rgba(0, 0, 0, 0.96) 58%,
+      rgba(0, 0, 0, 0.70) 70%,
+      rgba(0, 0, 0, 0.25) 82%,
+      transparent 96%
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 65%,
+      rgba(0, 0, 0, 0.95) 73%,
+      rgba(0, 0, 0, 0.75) 82%,
+      rgba(0, 0, 0, 0.40) 90%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 62% 68% at center,
+      #000 48%,
+      rgba(0, 0, 0, 0.96) 58%,
+      rgba(0, 0, 0, 0.70) 70%,
+      rgba(0, 0, 0, 0.25) 82%,
+      transparent 96%
+    );
+
+  /*
+   * Ambos gradientes se combinan mediante multiplicación.
+   * Esto permite conservar el efecto radial y el inferior.
+   */
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+
+  /*
+   * Integración visual con el fondo.
+   */
+  filter:
+    drop-shadow(
+      0 0 20px rgba(89, 135, 168, 0.18)
+    )
+    drop-shadow(
+      0 0 55px rgba(75, 100, 141, 0.12)
+    );
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+
+
+/* =========================================================
+   HOVER DE LA FOTO
+   ========================================================= */
+
+.photo-wrapper:hover .profile-photo {
+  transform: scale(1.035);
+
+  filter:
+    drop-shadow(
+      0 0 25px rgba(89, 135, 168, 0.30)
+    )
+    drop-shadow(
+      0 0 65px rgba(75, 100, 141, 0.20)
+    );
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-section {
+    padding: 6rem 3rem 4rem;
+  }
+
+  .hero-container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(320px, 0.85fr);
+
+    gap: 3rem;
+  }
+
+  .profile-photo {
+    width: 125%;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-section {
+    padding: 5rem 2rem 4rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    text-align: center;
+  }
+
+  .hero-text-content {
+    order: 2;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .hero-image-container {
+    order: 1;
+  }
+
+  .hero-badge {
+    margin-bottom: 1.2rem;
+  }
+
+  .divider-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .photo-wrapper {
+    max-width: 480px;
+  }
+
+  .profile-photo {
+    width: 115%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    min-height: auto;
+
+    padding:
+      6rem
+      1.25rem
+      4rem;
+  }
+
+  .hero-container {
+    gap: 0.5rem;
+  }
+
+  .hero-image-container {
+    width: 100%;
+  }
+
+  .photo-wrapper {
+    width: 100%;
+
+    max-width: 390px;
+  }
+
+  .profile-photo {
+    width: 115%;
+  }
+
+  .hero-name {
+    font-size: clamp(
+      2.2rem,
+      10vw,
+      3.2rem
+    );
+  }
+
+  .hero-title {
+    font-size: 1.15rem;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .photo-wrapper {
+    max-width: 330px;
+  }
+
+  .profile-photo {
+    width: 120%;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.05rem;
+  }
+
+  .hero-description {
+    font-size: 0.93rem;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+  }
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .profile-photo,
+  .cta-button {
+    transition: none;
+  }
+
+  .photo-wrapper:hover .profile-photo {
+    transform: none;
+  }
+
+}

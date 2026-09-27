@@ -1,0 +1,27 @@
+<section class="hero-section">
+  <div class="hero-container">
+    
+    <div class="hero-image-container">
+      <div class="photo-wrapper">
+        <img [src]="photoUrl" [alt]="fullName()" class="profile-photo">
+        <div class="photo-accent-border"></div>
+      </div>
+    </div>
+
+    <div class="hero-text-content">
+      <h1 class="hero-name">{{ fullName() }}</h1>
+      <h2 class="hero-title">{{ title() }}</h2>
+      
+      <div class="divider-line"></div>
+
+      <p class="hero-description">{{ description() }}</p>
+
+      <div class="hero-cta-group">
+        <button (click)="scrollToContact()" class="cta-button primary">
+          Contactar
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
