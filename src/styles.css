@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #000000; /* Fondo negro general de la página */
+  color: #e7fbf9;            /* Color de texto base claro */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Contenedor principal de la app estructurado en modo columna para empujar el footer abajo */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El área de contenido dinámico (Router) tomará el espacio disponible */
+router-outlet + * {
+  flex: 1;
+}
