@@ -12,7 +12,7 @@ export class Footer {
   currentYear: number = new Date().getFullYear();
   
   socialLinks = [
-     {name: 'Instagram', url:'',icon: 'instagram'},
+     {name: 'Instagram', url:'https://www.instagram.com/r_mondragon_m?stkn=MWJva2E0NGtoaTBjaQ==',icon: 'instagram'},
      {name: 'Facebook', url:'',icon: 'facebook'},
   
   ];

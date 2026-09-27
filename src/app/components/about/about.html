@@ -1,0 +1,71 @@
+<section class="about-section" id="sobre-mi">
+  <div class="about-container">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="about-header">
+      <span class="about-subtitle-tag">Trayectoria & Experiencia</span>
+      <h2 class="about-title">{{ sectionTitle() }}</h2>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Grid Principal: Biografía y Habilidades -->
+    <div class="about-grid">
+      
+      <!-- Tarjeta de Biografía -->
+      <div class="about-card bio-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 class="card-heading">Perfil Profesional</h3>
+          <p class="about-text">{{ bioDescription() }}</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Competencias y Habilidades -->
+      <div class="about-card skills-card">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          </div>
+          <h3 class="card-heading">Competencias & Habilidades</h3>
+          <div class="skills-chips">
+            @for (skill of skills(); track skill) {
+              <span class="skill-chip">
+                <span class="chip-dot"></span>
+                {{ skill }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sección de Asociaciones -->
+    <div class="associations-container">
+      <div class="associations-header">
+        <h3 class="card-heading text-center">Asociaciones Gremiales</h3>
+        <p class="associations-desc">Reconocimiento y participación activa en el gremio periodístico</p>
+      </div>
+      
+      <div class="associations-grid">
+        @for (assoc of associations(); track assoc.name) {
+          <div class="association-card">
+            <div class="assoc-glow"></div>
+            <div class="assoc-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <div class="assoc-info">
+              <span class="assoc-role">{{ assoc.role }}</span>
+              <h4 class="assoc-name">{{ assoc.name }}</h4>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

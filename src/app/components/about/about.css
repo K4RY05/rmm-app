@@ -1,0 +1,262 @@
+.about-section {
+  background-color: #000000;
+  color: #e7fbf9;
+  padding: 7rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.about-subtitle-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #b9e4f4;
+  background-color: rgba(89, 135, 168, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(89, 135, 168, 0.3);
+  margin-bottom: 1rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.divider-line {
+  height: 4px;
+  width: 70px;
+  background: linear-gradient(90deg, #4b648d, #b9e4f4);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tarjetas con estilo Glassmorphism y Glow */
+.about-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(15, 20, 30, 0.6), rgba(5, 8, 15, 0.8));
+  border: 1px solid rgba(89, 135, 168, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-card:hover {
+  border-color: rgba(185, 228, 244, 0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(89, 135, 168, 0.15);
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(75, 100, 141, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(75, 100, 141, 0.2);
+  border: 1px solid rgba(185, 228, 244, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9e4f4;
+  margin-bottom: 1.5rem;
+}
+
+.card-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #e7fbf9;
+  opacity: 0.9;
+}
+
+/* Chips de Habilidades (Estilo moderno tipo etiqueta) */
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(75, 100, 141, 0.15);
+  border: 1px solid rgba(89, 135, 168, 0.3);
+  color: #e7fbf9;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-chip:hover {
+  background-color: rgba(89, 135, 168, 0.3);
+  border-color: #b9e4f4;
+  transform: translateY(-2px);
+}
+
+.chip-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #b9e4f4;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #b9e4f4;
+}
+
+/* Sección de Asociaciones */
+.associations-container {
+  background: linear-gradient(145deg, rgba(15, 20, 30, 0.5), rgba(5, 8, 15, 0.7));
+  border: 1px solid rgba(89, 135, 168, 0.2);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.associations-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.associations-desc {
+  color: #b9e4f4;
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-top: -0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.associations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .associations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.association-card {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(89, 135, 168, 0.25);
+  border-radius: 14px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.association-card:hover {
+  background-color: rgba(75, 100, 141, 0.15);
+  border-color: #b9e4f4;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(89, 135, 168, 0.2);
+}
+
+.assoc-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(185, 228, 244, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.assoc-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(89, 135, 168, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9e4f4;
+}
+
+.assoc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.assoc-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5987a8;
+}
+
+.assoc-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e7fbf9;
+  margin: 0;
+  line-height: 1.5;
+}

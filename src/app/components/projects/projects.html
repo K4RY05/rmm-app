@@ -1,0 +1,47 @@
+<section class="projects-section" id="proyectos">
+  <div class="projects-container">
+    
+    <!-- Encabezado -->
+    <div class="projects-header">
+      <span class="projects-tag">Trabajo Destacado</span>
+      <h2 class="projects-title">{{ sectionTitle() }}</h2>
+      <p class="projects-subtitle">{{ sectionSubtitle() }}</p>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Carrusel Contenedor -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        @for (item of projects(); track item.title) {
+          <div class="project-card">
+            
+            <!-- Imagen del Proyecto -->
+            <div class="project-image-container">
+              <img [src]="item.image" [alt]="item.title" class="project-img">
+              <span class="project-badge">{{ item.badge }}</span>
+            </div>
+
+            <div class="project-content">
+              <span class="project-category">{{ item.category }}</span>
+              <h3 class="project-name">{{ item.title }}</h3>
+              <p class="project-platform">📍 {{ item.platform }}</p>
+              <p class="project-desc">{{ item.description }}</p>
+            </div>
+
+            <div class="project-footer">
+              @if (item.link) {
+                <a [href]="item.link" target="_blank" rel="noopener noreferrer" class="project-link-indicator active-link">
+                  Ver Artículo / Publicación ↗
+                </a>
+              } @else {
+                <span class="project-link-indicator inactive">Medio Activo</span>
+              }
+            </div>
+
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>
