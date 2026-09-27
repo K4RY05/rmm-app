@@ -1,0 +1,166 @@
+.contact-section {
+  background-color: #000000;
+  color: #e7fbf9;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #b9e4f4;
+  background-color: rgba(89, 135, 168, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(89, 135, 168, 0.3);
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #b9e4f4;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.divider-line {
+  height: 4px;
+  width: 70px;
+  background: linear-gradient(90deg, #4b648d, #b9e4f4);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Grid de Redes Sociales */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.social-card {
+  text-decoration: none;
+  position: relative;
+  background: linear-gradient(145deg, rgba(15, 20, 30, 0.6), rgba(5, 8, 15, 0.8));
+  border: 1px solid rgba(89, 135, 168, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  display: block;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+}
+
+.social-card:hover {
+  border-color: rgba(185, 228, 244, 0.5);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 25px rgba(89, 135, 168, 0.15);
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(75, 100, 141, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.social-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.social-icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(75, 100, 141, 0.2);
+  border: 1px solid rgba(185, 228, 244, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9e4f4;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.social-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.social-handle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #b9e4f4;
+}
+
+.social-desc {
+  font-size: 0.95rem;
+  color: #e7fbf9;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin-top: 0.3rem;
+}
+
+.social-action {
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(89, 135, 168, 0.15);
+}
+
+.visit-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b9e4f4;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.social-card:hover .visit-text {
+  color: #ffffff;
+  text-decoration: underline;
+}
