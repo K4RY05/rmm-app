@@ -11,14 +11,6 @@
   },
   "private": true,
   "packageManager": "pnpm@11.9.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "lmdb",
-      "msgpackr-extract"
-    ]
-  },
   "dependencies": {
     "@angular/common": "^22.1.0",
     "@angular/compiler": "^22.1.0",
